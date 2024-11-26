@@ -1,0 +1,15 @@
+version: "3"
+networks:
+  netw1:
+volumes:
+  asd:
+services:
+  web1:
+    image: httpd:latest
+    container_name : mycd
+    ports:
+      - "8082:80"
+    volumes:
+      - /host/asd:/container/data
+    networks:
+      - netw1
